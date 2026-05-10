@@ -1,59 +1,71 @@
-# FinalAngularProject
+# ArticleHole - نظام مدونة أنجولار حديث (Modern Angular Blog System)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+ArticleHole هو منصة تدوين متكاملة مبنية باستخدام إطار عمل **Angular**، توفر تجربة مستخدم سلسة وراقية مع ميزات حديثة مثل الوضع الداكن، إدارة المقالات، وتصميم متجاوب بالكامل.
 
-## Development server
+## 🚀 المميزات الرئيسية (Key Features)
 
-To start a local development server, run:
+### 1. **تجربة مستخدم متميزة (Premium UI/UX)**
+- **تصميم عصري**: واجهة مستخدم جذابة تعتمد على ألوان متناسقة وتوزيع بصري مريح.
+- **تفاعلات حركية**: تأثيرات (Transitions) ناعمة عند التنقل وحركات تفاعلية (Micro-interactions) عند التمرير.
+- **الوضع الداكن والفاتح**: دعم كامل لتبديل الثيم (Dark/Light Mode) مع حفظ اختيار المستخدم.
 
-```bash
-ng serve
-```
+### 2. **إدارة المحتوى (Content Management)**
+- **عرض المقالات**: عرض شبكي (Grid View) للمقالات التقنية مع تفاصيل الكاتب والتاريخ.
+- **محرر المقالات**: واجهة سهلة لإضافة مقالات جديدة أو تعديل المقالات القائمة.
+- **نظام الصور البديلة**: ذكاء في التعامل مع الروابط المفقودة للصور، حيث يتم عرض صور جمالية تلقائياً من Unsplash كبديل.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 3. **التقنيات والأداء (Tech & Performance)**
+- **Angular 21**: الاستفادة من أحدث تقنيات الإطار لضمان سرعة التحميل واستجابة الواجهة.
+- **تصميم متجاوب**: توافق تام مع كافة أحجام الشاشات (Mobile, Tablet, Desktop).
+- **SEO Optimized**: تحسين ظهور المحتوى في محركات البحث من خلال عناوين ووصف ديناميكي لكل صفحة.
+- **Mock Backend**: استخدام `json-server` لتوفير تجربة برمجية متكاملة (Full-stack experience) محلياً.
 
-## Code scaffolding
+### 4. **الصفحات الملحقة**
+- **صفحة About**: صفحة تعريفية بتصميم عصري.
+- **نظام العضوية (UI)**: واجهات تسجيل الدخول وإنشاء الحساب جاهزة للربط.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🛠️ التقنيات المستخدمة (Technologies)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Frontend**: Angular 21
+- **Styling**: Vanilla CSS (Modern CSS)
+- **Backend (Mock)**: JSON Server
+- **State & Data**: RxJS & Angular Services
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🏃 كيفية التشغيل (How to Run)
 
-To build the project run:
+لتبدأ العمل على المشروع محلياً، اتبع الخطوات التالية:
 
-```bash
-ng build
-```
+1. **تحميل التبعيات**:
+   ```bash
+   npm install
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. **تشغيل الخادم الوهمي (API)**:
+   ```bash
+   npm run api
+   ```
+   *سيعمل الخادم على المنفذ 3000.*
 
-## Running unit tests
+3. **تشغيل تطبيق الأنجولار**:
+   ```bash
+   npm start
+   ```
+   *افتح المتصفح على `http://localhost:4200`.*
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 📁 هيكلية المشروع (Project Structure)
 
-## Running end-to-end tests
+- `src/app/articles`: مكونات عرض المقالات وتفاصيلها.
+- `src/app/editor`: مكونات إضافة وتعديل المقالات.
+- `src/app/auth`: مكونات تسجيل الدخول والاشتراك.
+- `src/app/about`: صفحة التعريف بالموقع.
+- `db.json`: ملف قاعدة البيانات الوهمية.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+تم تطوير هذا المشروع كجزء من رحلة تعلم تقنيات الويب الحديثة.
