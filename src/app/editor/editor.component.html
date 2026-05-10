@@ -1,0 +1,80 @@
+<section class="editor-shell card hero-card">
+  <div class="editor-header">
+    <div>
+      <p class="eyebrow">Article Hole editor</p>
+      <h1 class="section-title">{{ title() }}</h1>
+      <p class="surface-copy">
+        Write a fresh post with a feature image, strong headline, and a crisp introduction.
+      </p>
+    </div>
+
+    <a class="secondary-button" routerLink="/articles">Back to posts</a>
+  </div>
+
+  @if (isLoading()) {
+    <div class="card state-card">
+      <app-loader label="Loading article..."></app-loader>
+    </div>
+  } @else if (errorMessage()) {
+    <div class="card state-card feedback error" role="alert">
+      {{ errorMessage() }}
+    </div>
+  } @else {
+    <form class="editor-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      @if (errorMessage()) {
+        <p class="feedback error" role="alert">{{ errorMessage() }}</p>
+      }
+
+      <div class="form-grid">
+        <div class="form-field full-width">
+          <label for="imageFile">Feature Image</label>
+          <div class="file-upload-wrapper">
+            <input id="imageFile" type="file" accept="image/*" (change)="onFileSelected($event)" class="file-input" />
+            <div class="upload-placeholder" [class.has-image]="imagePreview()">
+              @if (imagePreview()) {
+                <img [src]="imagePreview()" alt="Preview" class="image-preview" />
+                <div class="upload-overlay">
+                  <span>Change Image</span>
+                </div>
+              } @else {
+                <div class="upload-empty">
+                  <div class="upload-icon">📸</div>
+                  <span>Click to upload an image from your device</span>
+                </div>
+              }
+            </div>
+          </div>
+          @if (controlError('imageUrl')) {
+            <p class="field-error">An image is required.</p>
+          }
+        </div>
+
+        <div class="form-field full-width">
+          <label for="title">Title</label>
+          <input id="title" type="text" formControlName="title" placeholder="Give your article a catchy title..." />
+          @if (controlError('title')) {
+            <p class="field-error">{{ controlError('title') }}</p>
+          }
+        </div>
+
+        <div class="form-field full-width">
+          <label for="content">Content</label>
+          <textarea id="content" formControlName="content" placeholder="Tell your story..."></textarea>
+          @if (controlError('content')) {
+            <p class="field-error">{{ controlError('content') }}</p>
+          }
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="primary-button" type="submit" [disabled]="isSubmitting()">
+          @if (isSubmitting()) {
+            <span class="loader-wrap"><span class="loader-spin"></span> Saving...</span>
+          } @else {
+            Publish Article
+          }
+        </button>
+      </div>
+    </form>
+  }
+</section>

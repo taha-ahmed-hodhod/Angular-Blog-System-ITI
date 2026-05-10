@@ -1,0 +1,85 @@
+<section class="detail-page">
+  @if (isLoading()) {
+    <div class="state-card">
+      <p>Loading article...</p>
+    </div>
+  } @else if (errorMessage()) {
+    <div class="state-card error">
+      <p>{{ errorMessage() }}</p>
+      <a routerLink="/articles" class="secondary-button">Back to Blog</a>
+    </div>
+  } @else if (article(); as article) {
+    <article class="article-container">
+      <header class="article-header">
+        <a routerLink="/articles" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to Blog
+        </a>
+        <h1 class="article-title">{{ article.title }}</h1>
+        <div class="article-meta">
+          <span class="author">By {{ article.authorName }}</span>
+          <span class="date">{{ article.createdAt | date:'mediumDate' }}</span>
+          <button class="share-button" (click)='shareArticle()'>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+            Share
+          </button>
+        </div>
+      </header>
+
+      <div class="article-image">
+        <img [src]="article.imageUrl" [alt]="article.title">
+      </div>
+
+      <div class="article-content" [innerHTML]="article.content">
+      </div>
+
+      <hr class="divider">
+
+      <section class="comments-section">
+        <h3>Comments ({{ comments().length }})</h3>
+
+        @if (currentUser()) {
+          <div class="comment-form card">
+            <textarea
+              [value]="commentText()"
+              (input)="onCommentChange($event)"
+              placeholder="What are your thoughts?"
+              rows="3"
+            ></textarea>
+            <div class="form-actions">
+              <button
+                class="primary-button"
+                [disabled]="!commentText().trim() || isSubmittingComment()"
+                (click)="submitComment()"
+              >
+                @if (isSubmittingComment()) {
+                  Posting...
+                } @else {
+                  Post Comment
+                }
+              </button>
+            </div>
+          </div>
+        } @else {
+          <div class="login-prompt card">
+            <p>Please <a routerLink="/login">Login</a> to join the conversation.</p>
+          </div>
+        }
+
+        <div class="comments-list">
+          @for (comment of comments(); track comment.id) {
+            <div class="comment-item card">
+              <div class="comment-header">
+                <span class="comment-author">{{ comment.authorName }}</span>
+                <span class="comment-date">{{ comment.createdAt | date:'short' }}</span>
+              </div>
+              <p class="comment-text">{{ comment.content }}</p>
+            </div>
+          } @empty {
+            <p class="empty-state">No comments yet. Be the first to share your thoughts!</p>
+          }
+        </div>
+      </section>
+    </article>
+  }
+</section>

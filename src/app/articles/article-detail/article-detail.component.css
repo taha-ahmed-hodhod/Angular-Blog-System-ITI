@@ -1,0 +1,177 @@
+.detail-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.article-container {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.article-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  margin: 0 0 1.5rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--muted);
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.share-button:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.article-image {
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.article-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-content {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2rem 0;
+}
+
+.comments-section {
+  display: grid;
+  gap: 2rem;
+}
+
+.comments-section h3 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.comment-form {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.comment-form textarea {
+  width: 100%;
+  background: var(--page-bg);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: var(--text);
+  resize: vertical;
+}
+
+.comment-form textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comments-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.comment-item {
+  padding: 1.5rem;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.comment-author {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.comment-date {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.comment-text {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.login-prompt {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  padding: 2rem;
+}
+
+@media (max-width: 640px) {
+  .article-title {
+    font-size: 2rem;
+  }
+}
