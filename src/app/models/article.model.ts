@@ -2,7 +2,7 @@ export interface Article {
   id: string;
   title: string;
   content: string;
-  imageUrl: string;
+  imageUrl?: string;
   authorId: string;
   authorName: string;
   createdAt: string;
@@ -12,7 +12,7 @@ export interface Article {
 export interface ArticleFormValue {
   title: string;
   content: string;
-  imageUrl: string;
+  imageUrl?: string;
 }
 
 export interface Comment {

@@ -27,7 +27,7 @@
       </header>
 
       <div class="article-image">
-        <img [src]="article.imageUrl" [alt]="article.title">
+        <img [src]="article.imageUrl || 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000&auto=format&fit=crop'" [alt]="article.title">
       </div>
 
       <div class="article-content" [innerHTML]="article.content">

@@ -30,7 +30,7 @@ export class EditorComponent implements OnInit {
 
   protected readonly form = this.formBuilder.nonNullable.group({
     title: ['', [Validators.required, Validators.minLength(3)]],
-    imageUrl: ['', [Validators.required, Validators.minLength(8)]],
+    imageUrl: ['', [Validators.minLength(8)]],
     content: ['', [Validators.required, Validators.minLength(20)]],
   });
 
@@ -67,22 +67,17 @@ export class EditorComponent implements OnInit {
     });
   }
 
-  protected onFileSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      const file = input.files[0];
-      const reader = new FileReader();
-      
-      reader.onload = () => {
-        const result = reader.result as string;
-        this.imagePreview.set(result);
-        this.form.patchValue({ imageUrl: result });
-        this.form.get('imageUrl')?.markAsTouched();
-        this.form.get('imageUrl')?.markAsDirty();
-      };
-      
-      reader.readAsDataURL(file);
+  protected onImageUrlChange(): void {
+    const url = this.form.get('imageUrl')?.value;
+    if (url && url.length > 8) {
+      this.imagePreview.set(url);
+    } else {
+      this.imagePreview.set(null);
     }
+  }
+
+  protected onImageError(): void {
+    this.imagePreview.set(null);
   }
 
   protected submit(): void {

@@ -38,36 +38,7 @@
     }
   ],
   "articles": [
-    {
-      "id": "seed-1",
-      "title": "Designing a Blog That Feels Fast",
-      "content": "A thoughtful blog starts with clear structure, low-friction editing, and visible feedback for every network state. This starter article shows how small UI details change the whole experience.",
-      "imageUrl": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80",
-      "authorId": "user-seed-1",
-      "authorName": "Editorial Team",
-      "createdAt": "2026-04-01T10:00:00.000Z",
-      "updatedAt": "2026-04-01T10:00:00.000Z"
-    },
-    {
-      "id": "seed-2",
-      "title": "Why Ownership Matters in Content Tools",
-      "content": "When authors can only edit their own work, the application stays predictable and safe. The article list still stays public, but changes remain scoped to the current account.",
-      "imageUrl": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=900&q=80",
-      "authorId": "user-seed-1",
-      "authorName": "Editorial Team",
-      "createdAt": "2026-04-06T15:30:00.000Z",
-      "updatedAt": "2026-04-06T15:30:00.000Z"
-    },
-    {
-      "id": "1777061765536-7g6gvexe",
-      "title": "The Project",
-      "content": "Angular Blog Project – Requirements\n\n- Project Overview\n\nYou are required to build a Blog Application using Angular with API integration using JSON\nServer or any APIs.\n- The application must support\nUser authentication\nArticle management (CRUD)\nRoute protection\nProper UI states (loading, error, empty)\n\n- Required Pages\n\nYour application must include the following routes:\n* `/login\n`\n* `/register\n`\n* `/articles\n`\n* `/editor\n` (Create / Edit Article)\n\n- Authentication Requirements\n\nUsers must be able to:\n* Register\n* Login\n* Logout\n\nAuthentication must be handled using API calls\n\nStore logged-in user in:\n\n`localStorage\n`\n- Article Requirements\n- Authenticated Users\n* Create articles\n* Edit their own articles only\n* Delete their own articles only\n- Non-Authenticated Users\n* Can only view articles\n- Route Protection\n\nYou must implement a Guard to:\n\n* Prevent non-authenticated users from accessing:\n* `/editor\n`\n- Architecture Requirements\n* Use **Module-Based Architecture**\n* Use **Services** for all business logic and API calls\n* Use **Guards** for route protection\n- Error Handling (Mandatory)\nYour application must handle:\n* Invalid login\n* Failed API requests\n* Invalid form submissions\nUser-friendly error messages must be displayed.\n- UI States (Mandatory)\nYou must implement the following states:\n### Loading State\n* Show a loader while waiting for API response\n### Empty State\n* Display message when no data is available\nExample: “No articles found”\n### Error State\n* Display meaningful error messages\n---\n## Forms & Validation\n* Use **Reactive Forms**\n* Apply validation:\n* Required fields\n* Minimum length (title, content)",
-      "imageUrl": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1c?auto=format&fit=crop&w=900&q=80",
-      "authorId": "1777061690151-ov3n07zu",
-      "authorName": "Taha",
-      "createdAt": "2026-04-24T20:16:05.536Z",
-      "updatedAt": "2026-04-24T20:16:05.536Z"
-    },
+    
     {
       "id": "r0Qmj4oHONw",
       "title": "تشريح القلق",
@@ -77,7 +48,60 @@
       "authorName": "Taha Ahmed HodHod",
       "createdAt": "2026-05-10T18:55:55.192Z",
       "updatedAt": "2026-05-10T18:55:55.192Z"
+    },
+    {
+      "id": "seed-1",
+      "title": "Building for Accessibility",
+      "content": "Designing for accessibility helps everyone. In our content platform, we make sure that all articles are readable by screen readers and that the interface is keyboard-friendly.",
+      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
+      "authorId": "user-seed-1",
+      "authorName": "Editorial Team",
+      "createdAt": "2026-04-05T12:00:00.000Z",
+      "updatedAt": "2026-04-05T12:00:00.000Z"
+    },
+        {
+      "id": "web-ai-2026",
+      "title": "The Future of Web Development with AI",
+      "content": "Artificial Intelligence is no longer just a buzzword; it's a fundamental shift in how we build, test, and deploy web applications. From AI-assisted coding to dynamic user experiences, the landscape is evolving fast.",
+      "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80",
+      "authorId": "user-seed-1",
+      "authorName": "Editorial Team",
+      "createdAt": "2026-05-11T10:00:00.000Z",
+      "updatedAt": "2026-05-11T10:00:00.000Z"
+    },
+    {
+      "id": "angular-signals-guide",
+      "title": "Mastering Angular Signals",
+      "content": "Signals represent a major leap in Angular's reactivity model. In this guide, we dive deep into how signals work, why they are better than previous methods, and how to migrate your existing RxJS logic.",
+      "imageUrl": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=1000&q=80",
+      "authorId": "XOfh5JEHvho",
+      "authorName": "mohamed",
+      "createdAt": "2026-05-11T11:30:00.000Z",
+      "updatedAt": "2026-05-11T11:30:00.000Z"
+    },
+    {
+      "id": "ui-color-psychology",
+      "title": "Psychology of Color in UI Design",
+      "content": "Colors evoke emotions. Choosing the right palette for your application can increase user engagement and trust. We explore the science behind color choices in modern interfaces.",
+      "imageUrl": "https://images.unsplash.com/photo-1502691876148-a84978e59af8?auto=format&fit=crop&w=1000&q=80",
+      "authorId": "user-seed-1",
+      "authorName": "Editorial Team",
+      "createdAt": "2026-05-11T14:15:00.000Z",
+      "updatedAt": "2026-05-11T14:15:00.000Z"
+    },
+    {
+      "id": "sustainable-tech",
+      "title": "Sustainable Coding: Why it Matters",
+      "content": "Digital carbon footprint is a growing concern. Optimizing code for energy efficiency not only saves resources but also improves performance for the end user.",
+      "imageUrl": "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80",
+      "authorId": "SrUsXJ3lpks",
+      "authorName": "Taha Ahmed HodHod",
+      "createdAt": "2026-05-11T16:00:00.000Z",
+      "updatedAt": "2026-05-11T16:00:00.000Z"
     }
+
+    
+
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
