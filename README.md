@@ -1,32 +1,32 @@
-# ArticleHole - نظام مدونة أنجولار حديث (Modern Angular Blog System)
+# ArticleHole - Modern Angular Blog System
 
-ArticleHole هو منصة تدوين متكاملة مبنية باستخدام إطار عمل **Angular**، توفر تجربة مستخدم سلسة وراقية مع ميزات حديثة مثل الوضع الداكن، إدارة المقالات، وتصميم متجاوب بالكامل.
+ArticleHole is a comprehensive blogging platform built using the **Angular** framework, providing a smooth and sophisticated user experience with modern features like dark mode, article management, and a fully responsive design.
 
-## 🚀 المميزات الرئيسية (Key Features)
+## 🚀 Key Features
 
-### 1. **تجربة مستخدم متميزة (Premium UI/UX)**
-- **تصميم عصري**: واجهة مستخدم جذابة تعتمد على ألوان متناسقة وتوزيع بصري مريح.
-- **تفاعلات حركية**: تأثيرات (Transitions) ناعمة عند التنقل وحركات تفاعلية (Micro-interactions) عند التمرير.
-- **الوضع الداكن والفاتح**: دعم كامل لتبديل الثيم (Dark/Light Mode) مع حفظ اختيار المستخدم.
+### 1. **Premium UI/UX**
+- **Modern Design**: An attractive user interface based on harmonious colors and comfortable visual distribution.
+- **Smooth Interactions**: Soft transitions during navigation and interactive micro-interactions upon scrolling.
+- **Dark & Light Mode**: Full support for theme switching (Dark/Light Mode) with user preference persistence.
 
-### 2. **إدارة المحتوى (Content Management)**
-- **عرض المقالات**: عرض شبكي (Grid View) للمقالات التقنية مع تفاصيل الكاتب والتاريخ.
-- **محرر المقالات**: واجهة سهلة لإضافة مقالات جديدة أو تعديل المقالات القائمة.
-- **نظام الصور البديلة**: ذكاء في التعامل مع الروابط المفقودة للصور، حيث يتم عرض صور جمالية تلقائياً من Unsplash كبديل.
+### 2. **Content Management**
+- **Article Display**: Grid view for technical articles with author details and dates.
+- **Article Editor**: An easy-to-use interface for adding new articles or editing existing ones.
+- **Fallback Image System**: Intelligent handling of missing image links, where aesthetic images from Unsplash are automatically displayed as alternatives.
 
-### 3. **التقنيات والأداء (Tech & Performance)**
-- **Angular 21**: الاستفادة من أحدث تقنيات الإطار لضمان سرعة التحميل واستجابة الواجهة.
-- **تصميم متجاوب**: توافق تام مع كافة أحجام الشاشات (Mobile, Tablet, Desktop).
-- **SEO Optimized**: تحسين ظهور المحتوى في محركات البحث من خلال عناوين ووصف ديناميكي لكل صفحة.
-- **Mock Backend**: استخدام `json-server` لتوفير تجربة برمجية متكاملة (Full-stack experience) محلياً.
+### 3. **Tech & Performance**
+- **Angular 21**: Leveraging the latest framework technologies to ensure fast loading speeds and interface responsiveness.
+- **Responsive Design**: Full compatibility with all screen sizes (Mobile, Tablet, Desktop).
+- **SEO Optimized**: Improving content visibility in search engines through dynamic titles and descriptions for each page.
+- **Mock Backend**: Using `json-server` to provide a complete local full-stack experience.
 
-### 4. **الصفحات الملحقة**
-- **صفحة About**: صفحة تعريفية بتصميم عصري.
-- **نظام العضوية (UI)**: واجهات تسجيل الدخول وإنشاء الحساب جاهزة للربط.
+### 4. **Additional Pages**
+- **About Page**: An introductory page with a modern design.
+- **Membership System (UI)**: Login and sign-up interfaces ready for integration.
 
 ---
 
-## 🛠️ التقنيات المستخدمة (Technologies)
+## 🛠️ Technologies Used
 
 - **Frontend**: Angular 21
 - **Styling**: Vanilla CSS (Modern CSS)
@@ -35,37 +35,37 @@ ArticleHole هو منصة تدوين متكاملة مبنية باستخدام 
 
 ---
 
-## 🏃 كيفية التشغيل (How to Run)
+## 🏃 How to Run
 
-لتبدأ العمل على المشروع محلياً، اتبع الخطوات التالية:
+To start working on the project locally, follow these steps:
 
-1. **تحميل التبعيات**:
+1. **Install Dependencies**:
    ```bash
    npm install
    ```
 
-2. **تشغيل الخادم الوهمي (API)**:
+2. **Run the Mock Server (API)**:
    ```bash
    npm run api
    ```
-   *سيعمل الخادم على المنفذ 3000.*
+   *The server will run on port 3000.*
 
-3. **تشغيل تطبيق الأنجولار**:
+3. **Run the Angular Application**:
    ```bash
    npm start
    ```
-   *افتح المتصفح على `http://localhost:4200`.*
+   *Open your browser at `http://localhost:4200`.*
 
 ---
 
-## 📁 هيكلية المشروع (Project Structure)
+## 📁 Project Structure
 
-- `src/app/articles`: مكونات عرض المقالات وتفاصيلها.
-- `src/app/editor`: مكونات إضافة وتعديل المقالات.
-- `src/app/auth`: مكونات تسجيل الدخول والاشتراك.
-- `src/app/about`: صفحة التعريف بالموقع.
-- `db.json`: ملف قاعدة البيانات الوهمية.
+- `src/app/articles`: Components for displaying articles and their details.
+- `src/app/editor`: Components for adding and editing articles.
+- `src/app/auth`: Components for login and registration.
+- `src/app/about`: The site's introductory page.
+- `db.json`: The mock database file.
 
 ---
 
-تم تطوير هذا المشروع كجزء من رحلة تعلم تقنيات الويب الحديثة.
+This project was developed as part of a journey to learn modern web technologies.
